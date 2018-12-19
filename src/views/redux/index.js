@@ -1,5 +1,5 @@
 /**
- * 以下为一个完整的redux练习
+ * 以下为一个完整的redux练习 haha
  */
 function renderApp (newAppState,oldAppState={}) {
     if(newAppState === oldAppState) return;//数据没有变化，就不渲染了
