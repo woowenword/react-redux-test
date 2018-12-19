@@ -15,10 +15,10 @@ export default class CommentInput extends Component{
 
     constructor(props){
         super(props);
+        //修改为Dumb组件：
         this.state = {
-            username : '',
-            content : '',
-            timeString:''
+            username: props.username,//从props上取username值
+            content: ''
         }
     }
 
@@ -26,23 +26,12 @@ export default class CommentInput extends Component{
 
     componentDidMount(){//dom加载完毕后，聚焦
         this.textarea.focus();
-        this._loadUserName();
-    }
-    _loadUserName(){
-        const userName = localStorage.getItem('userName');
-        if(userName){
-            this.setState({
-                username: userName
-            })
-        }
-    }
-  
-    _saveUserName(name){
-        localStorage.setItem('userName',name)
     }
 
-    handleUserNameBlur(event){
-        this._saveUserName(event.target.value)
+    handleUsernameBlur(event){
+        if(this.props.onUserNameInputBlur){
+            this.props.onUserNameInputBlur(event.target.value)
+        }
     }
 
     handleUsernameChange(event){
@@ -57,6 +46,7 @@ export default class CommentInput extends Component{
             content : event.target.value
         })
     }
+
     handleButtonClick(){
         if(this.props.onSubmit){
             const { username , content } = this.state;
@@ -66,6 +56,7 @@ export default class CommentInput extends Component{
             content : ''
         })
     }
+    
     render(){
         return (
             <div className="inputContainer">
@@ -74,7 +65,7 @@ export default class CommentInput extends Component{
                     <input type="text" 
                     value={this.state.username} 
                     onChange={this.handleUsernameChange.bind(this)}
-                    onBlur={this.handleUserNameBlur.bind(this)}/>
+                    onBlur={this.handleUsernameBlur.bind(this)}/>
                 </div>
                 <div className="inputContent">
                     <span>评论内容:</span>

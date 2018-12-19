@@ -1,0 +1,71 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+  
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+
+ol, ul {
+    list-style: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+caption, th, td {
+    text-align: left;
+    font-weight: normal;
+}
+q, blockquote {
+    quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block;
+}
+img {
+    vertical-align: top;
+    border: none;
+}
+i{font-style:normal;}
+s{text-decoration: none;}
+a{ text-decoration:none; -webkit-appearance:none;}
+a,img,button,input,textarea{-webkit-tap-highlight-color:rgba(255,255,255,0);}
+input,textarea,button{  resize:none; -webkit-appearance:none; outline:none;}
+input[type=button], input[type=submit], input[type=file], button { cursor: pointer; -webkit-appearance: none;}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder{ color: #cecece;}
+input:-moz-placeholder, textarea:-moz-placeholder{ color: #cecece;}
+input,textarea,button{resize:none; -webkit-appearance:none; outline:medium;border:none;}
+input{ border: none; background: none; width:100%;font-family: Microsoft Yahei,Avenir,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;}
+/*浮动*/
+.left{ float:left;}
+.right{ float:right;}
+.hide{ display: none !important;}
+.show{ display: block;}
+/*清除浮动*/
+.clearfix{zoom:1;}
+.clearfix:after {
+    display: block;
+    height: 0;
+    conyent: "";
+    clear: both;
+    visibility: hidden;
+}
+/** 透明 **/
+.opacity {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+    opacity: 0.5;
+}

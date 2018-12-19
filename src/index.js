@@ -1,16 +1,21 @@
 import React,{Component} from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-//import App from './views/App';
+import { Provider } from 'react-redux';
+import configStore from '../src/store/index'
+import './css/index';
 import * as serviceWorker from './serviceWorker';
 
-//ReactDOM.render(<App />, document.getElementById('root'));
+//import App from './views/App';
 //import Index from './views/context/index'
 //import NewIndex from './views/context_store/index'
 // import NewIndex2 from './views/context_store_2/index'
 import CommentApp from './views/comment/index'
+import CommentApp2 from './views/comment_2/index'
+
 ReactDOM.render(
-    <CommentApp />,
+    <Provider store={ configStore() }>
+        <CommentApp2 />
+    </Provider>,
     document.getElementById(('root'))
 );
 

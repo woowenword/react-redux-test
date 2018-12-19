@@ -11,7 +11,7 @@ class CommentApp extends Component{
             comments : []
         }
     }
-    componentWillMount(){
+    componentWillMount(){   
         this._loadComments();
     }
     _loadComments(){

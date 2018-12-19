@@ -16,9 +16,9 @@ export default class ComponentList extends Component{
         super(props);
     }   
 
-    handleClickDelet(index){
+    handleClickDelet(index){//子组件Comment.js 回调给父组件CommentList
         if(this.props.onDeleteComment){
-            this.props.onDeleteComment(index);
+            this.props.onDeleteComment(index);//再次回调给container/CommentList组件
         }
     }
     
